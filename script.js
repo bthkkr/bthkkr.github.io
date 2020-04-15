@@ -117,7 +117,7 @@ window.onload = function () {
 	// *******************************************************
 	// Calling Timer Function
 	// *******************************************************
-	var fiveMinutes = 60 * 5,
+	var fiveMinutes = 60 * 3,
 		display = document.querySelector('#time');
 	startTimer(fiveMinutes, display);
 
