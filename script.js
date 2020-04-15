@@ -60,7 +60,7 @@ window.onload = function () {
 	// 	};
 	// }
 
-	var fiveMinutes = 60 * 2,
+	var fiveMinutes = 60 * 5,
 		display = document.querySelector('#time');
 	startTimer(fiveMinutes, display);
 
@@ -139,10 +139,10 @@ window.onload = function () {
 				timer = duration;
 			}
 
-			if (minutes == 0 && seconds == 0) {
-				display.textContent = 'GAME OVER';
-				break;
-			}
+			// if (minutes == 0 && seconds == 0) {
+			// 	display.textContent = 'GAME OVER';
+			// 	break;
+			// }
 		}, 1000);
 		// we don't want to wait a full second before the timer starts
 		// timer();
