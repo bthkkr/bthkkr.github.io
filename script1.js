@@ -88,9 +88,6 @@ window.onload = function () {
 	var counter = 0;
 	var countScore = 0;
 
-	// *******************************************************
-	// Creating GRID Buttons Layout
-	// *******************************************************
 	//var buttons = function () {
 	//debugger;
 	myButtons = document.getElementById('buttons');
@@ -114,24 +111,20 @@ window.onload = function () {
 	// 	};
 	// }
 
-	// *******************************************************
-	// Calling Timer Function
-	// *******************************************************
 	var fiveMinutes = 60 * 5,
 		display = document.querySelector('#time');
 	startTimer(fiveMinutes, display);
 
-	// Create Score variable
 	var scored = document.querySelector('#score');
 	scored.innerHTML = 0;
 
-	//Create an array of words
+	// //Create an array of words
 	var words = ['javascript', 'monkey', 'amazing', 'pancake'];
 
-	// Pick a random word
+	// // Pick a random word
 	var word = words[Math.floor(Math.random() * words.length)];
 
-	// Set up the answer array
+	// // Set up the answer array
 	var answerArray = [];
 	for (var i = 0; i < word.length; i++) {
 		answerArray[i] = '    _    ';
@@ -140,7 +133,6 @@ window.onload = function () {
 	var wordHolder = document.querySelector('#hold');
 	wordHolder.innerHTML = answerArray.join('');
 
-	// Variable for the letters left or correct guesses left
 	var remainingLetters = word.length;
 	//
 	//debugger;
@@ -172,10 +164,6 @@ window.onload = function () {
 	// };
 
 	//letters.addEventListener('click', (event) => {
-
-	// *******************************************************************************
-	// Adding Event Listener for the List created and the User Guess loop or Game Loop
-	// ******************************************************************************
 
 	letters.addEventListener('click', function clickHandler(event) {
 		// event.preventDefault();
@@ -243,16 +231,11 @@ window.onload = function () {
 		// timer();
 		// setInterval (timer, 1000);
 	}
-	// *******************************************************************************
-	// Resetting the Game to Play Again
-	// ******************************************************************************
+
 	this.document.getElementById('reset').onclick = function () {
 		//letters.parentNode.removeChild(letters);
 	};
 };
-//********************************************************
-//CODING for this Game Ends Here
-//********************************************************
 
 // // The game loop
 // while (remainingLetters > 0) {
