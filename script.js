@@ -76,7 +76,7 @@ window.onload = function () {
 	// // Set up the answer array
 	var answerArray = [];
 	for (var i = 0; i < word.length; i++) {
-		answerArray[i] = ' _ ';
+		answerArray[i] = '    _    ';
 	}
 
 	var wordHolder = document.querySelector('#hold');
@@ -84,9 +84,40 @@ window.onload = function () {
 
 	var remainingLetters = word.length;
 	//
+	//debugger;
+	// list.onclick = function clickHandler(event) {
+	// 	console.log(this.innerText);
 
-	letters.addEventListener('click', (event) => {
+	// 	var guess = this.innerText;
+	// 	console.log(guess);
+	// 	this.setAttribute('class', 'active');
+	// 	this.onclick = null;
+	// 	for (var j = 0; j < word.length; j++) {
+	// 		if (word[j] === guess) {
+	// 			answerArray[j] = guess;
+	// 			wordHolder.innerHTML = answerArray.join('');
+	// 			remainingLetters--;
+	// 			console.log(remainingLetters);
+	// 			counter = counter + 1;
+	// 		}
+	// 	}
+	// 	if (counter != 0 && (counter == 1 || counter > 1)) {
+	// 		countScore = parseInt(scored.innerHTML) + 10;
+	// 		scored.innerHTML = countScore;
+	// 		counter = 0;
+	// 	} else if (counter == 0) {
+	// 		countScore = parseInt(scored.innerHTML) - 5;
+	// 		scored.innerHTML = countScore;
+	// 		counter = 0;
+	// 	}
+	// };
+
+	//letters.addEventListener('click', (event) => {
+
+	letters.addEventListener('click', function clickHandler(event) {
+		// event.preventDefault();
 		// console.log(event.target.innerHTML);
+		// var clicked = event.target;
 		console.log(event.target.innerHTML);
 		//debugger;
 		var guess = event.target.innerHTML;
@@ -95,7 +126,8 @@ window.onload = function () {
 		event.target.setAttribute('class', 'active');
 		//event.target.onclick = null;
 		//event.target.removeEventListener('click', event);
-		event.target.onclick = null;
+		// event.target.removeEventListener ("click", clickHandler);
+		// event.target.onclick = null;
 		console.log(this.onclick);
 		//debugger;
 		for (var j = 0; j < word.length; j++) {
