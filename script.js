@@ -5,7 +5,58 @@
 // window.onload = setUpGame();
 
 window.onload = function () {
-	// 	//setUpGame();
+	
+	  setUpGame();
+	// *******************************************************
+	// Function for SetUp
+	// *******************************************************
+
+	function setUpGame() {
+		// Confirm to Start
+		var playGame = confirm('Ready to play Hangman Game');
+		if (playGame) {
+			// creating a prompt
+			promptUser();
+		} else {
+			quitGame();
+		}
+	}
+
+	// *******************************************************
+	// Function for PromptUser
+	// *******************************************************
+
+	function promptUser() {
+		var nameEntered = prompt("What's your name?");
+		if (nameEntered === '') {
+			//user pressed OK, but the input field was empty
+			alert('Please enter your name cannot leave it blank!');
+			promptUser();
+		} else if (nameEntered) {
+			// user typed something and hit OK
+			alert('Hello ' + nameEntered + ' Here you go for Hangman Game!');
+		} else {
+			// user hit cancel
+			// alert('Please enter your name cannot leave it blank!');
+			// promptUser();
+			quitGame();
+		}
+	}
+
+	// *******************************************************
+	// Function for QuitGame
+	// *******************************************************
+
+	function quitGame() {
+		var quitPlay = confirm('Do you want to quit this game?');
+		if (quitPlay) {
+			window.close();
+		} else {
+			setUpGame();
+		}
+	}
+
+	//setUpGame();
 	//debugger;
 	var alphabet = [
 		'a',
@@ -53,6 +104,8 @@ window.onload = function () {
 		myButtons.appendChild(letters);
 		letters.appendChild(list);
 	}
+
+	
 	//}
 	// function check() {
 	// 	list.onclick = function () {
@@ -214,54 +267,6 @@ window.onload = function () {
 // // //alert(answerArray.join(' '));
 // wordHolder.innerHTML = answerArray.join('');
 // alert('Good job! The answer was ' + word);
-
-// *******************************************************
-// Function for SetUp
-// *******************************************************
-
-// function setUpGame() {
-// 	// Confirm to Start
-// 	var playGame = confirm('Ready to play Hangman Game');
-// 	if (playGame) {
-// 		// creating a prompt
-// 		promptUser();
-// 	} else {
-// 		quitGame();
-// 	}
-// }
-
-// *******************************************************
-// Function for PromptUser
-// *******************************************************
-
-// function promptUser() {
-// 	var nameEntered = prompt("What's your name?");
-// 	if (nameEntered === '') {
-// 		//user pressed OK, but the input field was empty
-// 		alert('Please enter your name cannot leave it blank!');
-// 		promptUser();
-// 	} else if (nameEntered) {
-// 		// user typed something and hit OK
-// 		alert('Hello ' + nameEntered + ' Here you go for Hangman Game!');
-// 	} else {
-// 		// user hit cancel
-// 		alert('Please enter your name cannot leave it blank!');
-// 		promptUser();
-// 	}
-// }
-
-// *******************************************************
-// Function for QuitGame
-// *******************************************************
-
-// function quitGame() {
-// 	var quitPlay = confirm('Do you want to quit this game?');
-// 	if (quitPlay) {
-// 		window.close();
-// 	} else {
-// 		setup();
-// 	}
-// }
 
 // ******************************************************
 //CODING FOR THE GAME

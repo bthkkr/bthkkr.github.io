@@ -1,4 +1,4 @@
-# Hangman-Game
+# HANGMAN-GAME
 ## Word Guessing Game
 
 ![ScreenShot](/images/ScreenShot.png)
